@@ -22,31 +22,34 @@
 <body>
 <main>
 <h1>Privacy Policy</h1>
-<p class="meta">Zenze Dev · Last updated: 6 November 2026</p>
+<p class="meta">Zenze Dev · Last updated: 22 November 2026</p>
 
-<p>This Privacy Policy explains how Zenze Dev ("we", "us") handles information when you use our games on Android. It applies to the following apps (together, the "Apps"):</p>
+<p>This Privacy Policy explains how Zenze Dev ("we", "us") handles information when you use our games on Android. It applies to the following apps (together, the "Apps"). <strong>Pawblo has an account and a server and is described in its own section.</strong></p>
 <table>
   <tr><th>App</th><th>Package name</th></tr>
-  <tr id="buried-chests"><td>Buried Chests: Logic Puzzle</td><td><code>dev.zenze.buriedchests</code></td></tr>
-  <tr id="gallery-swap"><td>Gallery Swap — Calm Art Jigsaw</td><td><code>dev.zenze.galleryswap</code></td></tr>
-  <tr id="origami-shelf"><td>Origami Shelf: Fold Puzzle</td><td><code>dev.zenze.origamishelf</code></td></tr>
-  <tr id="postcard-word-search"><td>Postcard Word Search</td><td><code>dev.zenze.postcardwordsearch</code></td></tr>
-  <tr id="tidy-words"><td>Tidy Words: Book Sort Puzzle</td><td><code>dev.zenze.tidywords</code></td></tr>
+  <tr><td>Postcard Word Search</td><td><code>dev.zenze.postcardwordsearch</code></td></tr>
+  <tr><td>Tidy Words: Book Sort Puzzle</td><td><code>dev.zenze.tidywords</code></td></tr>
+  <tr><td>Gallery Swap: Calm Art Jigsaw</td><td><code>dev.zenze.galleryswap</code></td></tr>
+  <tr><td>Buried Chests: Logic Puzzle</td><td><code>dev.zenze.buriedchests</code></td></tr>
+  <tr><td>Origami Shelf</td><td><code>dev.zenze.origamishelf</code></td></tr>
+  <tr><td>Couchette — Cozy Train ASMR</td><td><code>com.zenzedev.couchette</code></td></tr>
+  <tr><td>Nobody Saw That</td><td><code>com.zenzedev.nobodysawthat</code></td></tr>
+  <tr><td>Pawblo</td><td><code>dev.zenze.pawblo</code></td></tr>
 </table>
 
 <h2>1. Summary</h2>
 <ul>
-  <li>The Apps have no accounts or sign-in. We never ask for your name, email address, phone number, contacts, photos or precise location.</li>
-  <li>Your game progress and settings are saved only on your device. We do not run our own servers.</li>
-  <li>The Apps show ads through Google AdMob, use Google Firebase to understand how the game is played and to fix crashes, and sell optional items through Google Play Billing.</li>
+  <li>Except Pawblo, the Apps have no accounts or sign-in. We never ask for your name, email address, phone number, contacts, photos or precise location.</li>
+  <li>Except Pawblo, your game progress and settings are saved only on your device and we do not run servers for the Apps.</li>
+  <li>Depending on the App, it shows ads through Google AdMob, uses Google Firebase to understand how the game is played and to fix crashes, and sells optional items through Google Play Billing. See the table in section 3 and each App's section.</li>
   <li>If you are in the European Economic Area (EEA), the United Kingdom or Switzerland, you are asked for your choices before personalised ads are shown or analytics are collected, and you can change them at any time in Settings → Privacy options.</li>
 </ul>
 
 <h2>2. Information stored on your device</h2>
-<p>The Apps save game progress, completed levels, daily streaks, hints, purchase entitlements and settings (such as sound and accessibility options) on your device. This data is not sent to us. It is removed when you uninstall the App, clear its data, or use "Reset progress" where available. Because there are no accounts, progress is not transferred to a new device; purchases can be restored with "Restore purchases".</p>
+<p>The Apps save game progress, completed levels, daily streaks, hints, purchase entitlements and settings (such as sound and accessibility options) on your device. Except for Pawblo, this data is not sent to us. It is removed when you uninstall the App, clear its data, or use "Reset progress" where available. Because those Apps have no accounts, progress is not transferred to a new device; purchases can be restored with "Restore purchases". Pawblo's server data is described in the Pawblo section.</p>
 
 <h2>3. Services we use and what they collect</h2>
-<p>The following third-party services, provided by Google, process data when you use the Apps:</p>
+<p>The following services process data when you use the Apps that include them:</p>
 <table>
   <tr><th>Service</th><th>Purpose</th><th>Data processed</th></tr>
   <tr>
@@ -74,8 +77,30 @@
     <td>Processing optional in-app purchases (such as Remove Ads, themes or hint packs) and restoring them</td>
     <td>Purchase records handled by Google Play. We never receive your payment card details or Google account details.</td>
   </tr>
+  <tr>
+    <td>Firebase Authentication (Pawblo only)</td>
+    <td>Anonymous guest sign-in so the Pawblo server can recognise your game</td>
+    <td>Anonymous Firebase user ID and sign-in token; see the Pawblo section</td>
+  </tr>
+  <tr>
+    <td>Cloudflare Workers and D1 (Pawblo only)</td>
+    <td>Our backend that stores Pawblo progress, results and purchase records and verifies Google Play purchases</td>
+    <td>See the Pawblo section</td>
+  </tr>
 </table>
-<p>Not every App uses every service listed above. We do not sell your personal information, and we do not receive information that directly identifies you; we only see aggregated reports and crash reports.</p>
+<p>Which App uses which service:</p>
+<table>
+  <tr><th>App</th><th>AdMob + UMP</th><th>Firebase Analytics</th><th>Crashlytics</th><th>Remote Config</th><th>Play Billing</th><th>Firebase Auth</th><th>Our backend</th></tr>
+  <tr><td><a href="#postcardwordsearch">Postcard Word Search</a></td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#tidywords">Tidy Words: Book Sort Puzzle</a></td><td>Yes</td><td>Yes</td><td>Yes</td><td>–</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#galleryswap">Gallery Swap: Calm Art Jigsaw</a></td><td>Yes</td><td>Yes</td><td>Yes</td><td>–</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#buriedchests">Buried Chests: Logic Puzzle</a></td><td>Yes</td><td>Yes</td><td>Yes</td><td>–</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#origamishelf">Origami Shelf</a></td><td>Yes</td><td>Yes</td><td>–</td><td>–</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#couchette">Couchette — Cozy Train ASMR</a></td><td>Yes</td><td>–</td><td>–</td><td>–</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#nobodysawthat">Nobody Saw That</a></td><td>Yes</td><td>–</td><td>–</td><td>–</td><td>Yes</td><td>–</td><td>–</td></tr>
+  <tr><td><a href="#pawblo">Pawblo</a></td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>Yes</td><td>Yes</td></tr>
+</table>
+<p>We do not sell your personal information. Except for Pawblo, we do not receive information that directly identifies you; we only see aggregated reports and crash reports.</p>
 <p>Google acts as our processor for Firebase and, for some advertising purposes, as an independent controller. Learn more:</p>
 <ul>
   <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
@@ -84,8 +109,97 @@
   <li><a href="https://support.google.com/admob/answer/9012903">AdMob ad technology providers</a></li>
 </ul>
 
-<h2>4. Your consent choices (EEA, UK and Switzerland)</h2>
-<p>If you are located in the EEA, the UK or Switzerland, the Apps display a consent message from Google's User Messaging Platform, which follows the IAB Transparency &amp; Consent Framework. The App checks your choices each time it starts. You can:</p>
+<h2 id="apps">4. Each App</h2>
+<p>Jump to: <a href="#postcardwordsearch">Postcard Word Search</a> · <a href="#tidywords">Tidy Words: Book Sort Puzzle</a> · <a href="#galleryswap">Gallery Swap: Calm Art Jigsaw</a> · <a href="#buriedchests">Buried Chests: Logic Puzzle</a> · <a href="#origamishelf">Origami Shelf</a> · <a href="#couchette">Couchette — Cozy Train ASMR</a> · <a href="#nobodysawthat">Nobody Saw That</a> · <a href="#pawblo">Pawblo</a></p>
+
+<h3 id="postcardwordsearch">Postcard Word Search</h3>
+<p>Package: <code>dev.zenze.postcardwordsearch</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Firebase Analytics</strong>: game events (for example levels started or completed). Collected only after you consent in the UMP message; if you decline or have not answered, it stays off.</li>
+  <li><strong>Firebase Crashlytics</strong>: crash and error reports. Reports never include words you type or select in the game.</li>
+  <li><strong>Firebase Remote Config</strong>: remote game settings (for example how often ads appear).</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="tidywords">Tidy Words: Book Sort Puzzle</h3>
+<p>Package: <code>dev.zenze.tidywords</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Firebase Analytics</strong>: game events (for example levels started or completed). Collected only after you consent in the UMP message; if you decline or have not answered, it stays off.</li>
+  <li><strong>Firebase Crashlytics</strong>: crash and error reports. Reports never include words you type or select in the game.</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="galleryswap">Gallery Swap: Calm Art Jigsaw</h3>
+<p>Package: <code>dev.zenze.galleryswap</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Firebase Analytics</strong>: game events (for example levels started or completed). Collected only after you consent in the UMP message; if you decline or have not answered, it stays off.</li>
+  <li><strong>Firebase Crashlytics</strong>: crash and error reports. Reports never include words you type or select in the game.</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="buriedchests">Buried Chests: Logic Puzzle</h3>
+<p>Package: <code>dev.zenze.buriedchests</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Firebase Analytics</strong>: game events (for example levels started or completed). Collected only after you consent in the UMP message; if you decline or have not answered, it stays off.</li>
+  <li><strong>Firebase Crashlytics</strong>: crash and error reports. Reports never include words you type or select in the game.</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="origamishelf">Origami Shelf</h3>
+<p>Package: <code>dev.zenze.origamishelf</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Firebase Analytics</strong>: game events (for example levels started or completed). Collected only after you consent in the UMP message; if you decline or have not answered, it stays off.</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="couchette">Couchette — Cozy Train ASMR</h3>
+<p>Package: <code>com.zenzedev.couchette</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="nobodysawthat">Nobody Saw That</h3>
+<p>Package: <code>com.zenzedev.nobodysawthat</code></p>
+<ul>
+  <li><strong>Google AdMob</strong> with Google User Messaging Platform (UMP): interstitial and optional rewarded ads, and your consent choices.</li>
+  <li><strong>Google Play Billing</strong>: optional in-app purchases and restoring them.</li>
+</ul>
+<p>No accounts, no sign-in and no servers of our own: progress and settings stay on your device. In the App, <strong>Settings → Privacy options</strong> (your consent choices, shown where required) and <strong>Settings → Privacy Policy</strong> (this page) are available.</p>
+
+<h3 id="pawblo">Pawblo</h3>
+<p>Package: <code>dev.zenze.pawblo</code>. <strong>Pawblo is different from our other games: it has an account and our own server.</strong> Statements about "no accounts" and "no servers" elsewhere on this page do not apply to Pawblo.</p>
+<p><strong>Account (Firebase Authentication).</strong> Pawblo signs you in automatically as an anonymous guest using Google Firebase Authentication. You do not enter a name, email address or password. Firebase creates a guest user ID and the App keeps a sign-in token on your device. Nothing is sent to our server, and no sign-in starts, until you have accepted the Terms and Privacy Policy in the App.</p>
+<p><strong>Server data (Cloudflare Workers + D1).</strong> The App talks to our backend, which runs on Cloudflare Workers with a Cloudflare D1 database. Each request carries your Firebase ID token, which the server verifies. The server stores:</p>
+<ul>
+  <li>an internal account ID (random; not your Firebase user ID) and the link between it and your Firebase user ID;</li>
+  <li>your game progress and results (the player record of the game);</li>
+  <li>short-lived technical records: recent request records (so a repeated request is answered the same way) and a per-day count of your game calls;</li>
+  <li>purchase history: for each Google Play purchase, the purchase token, product ID, order ID, what was granted, its state (granted or refunded) and timestamps.</li>
+</ul>
+<p><strong>Receipt verification.</strong> The server sends the purchase token to the Google Play Developer API to confirm the purchase, grant the item and detect refunds. We never receive your payment card or Google account details.</p>
+<p><strong>Services in Pawblo.</strong> Firebase Authentication (Google) and Cloudflare Workers / D1 (Cloudflare, Inc.) process the data above for us (<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>). The Pawblo App does not include AdMob, Firebase Analytics, Crashlytics or Remote Config.</p>
+<p><strong>Deleting your data and retention.</strong></p>
+<ul>
+  <li>Recent request records are removed automatically after 7 days, and old per-day call counts are removed automatically.</li>
+  <li>Progress, account and purchase records currently have no automatic expiry, and the App does not yet have a function to delete your account or server data. We will describe the deletion process and retention periods here once they are in place.</li>
+  <li>Uninstalling the App removes the data stored on your device, including the guest sign-in token.</li>
+</ul>
+<p>Questions about your Pawblo data: <a href="mailto:zenzedev@gmail.com">zenzedev@gmail.com</a>.</p>
+
+<h2>5. Your consent choices (EEA, UK and Switzerland)</h2>
+<p>If you are located in the EEA, the UK or Switzerland, the Apps that show ads display a consent message from Google's User Messaging Platform, which follows the IAB Transparency &amp; Consent Framework. The App checks your choices each time it starts. You can:</p>
 <ul>
   <li>Consent to personalised ads and related processing;</li>
   <li>Decline, in which case you may still see non-personalised or limited ads; or</li>
@@ -93,43 +207,44 @@
 </ul>
 <p>Firebase Analytics data is collected only if you have given consent; if you decline or have not yet answered, analytics collection stays off. You can change or withdraw your consent at any time from <strong>Settings → Privacy options</strong> in the App.</p>
 
-<h2>5. Legal bases (GDPR / UK GDPR)</h2>
+<h2>6. Legal bases (GDPR / UK GDPR)</h2>
 <table>
   <tr><th>Purpose</th><th>Legal basis</th></tr>
-  <tr><td>Saving progress and settings on your device; delivering and restoring purchases</td><td>Performance of a contract with you (Art. 6(1)(b))</td></tr>
+  <tr><td>Saving progress and settings on your device; delivering and restoring purchases; Pawblo account, progress and purchase records</td><td>Performance of a contract with you (Art. 6(1)(b))</td></tr>
   <tr><td>Personalised ads; storing or accessing information on your device for ads; game analytics</td><td>Your consent (Art. 6(1)(a)), which you can withdraw at any time</td></tr>
   <tr><td>Non-personalised ads, ad measurement and fraud prevention</td><td>Our legitimate interest in funding a free game and keeping it secure (Art. 6(1)(f)), or consent where the law requires it</td></tr>
   <tr><td>Crash reporting and remote settings</td><td>Our legitimate interest in keeping the App stable and working correctly (Art. 6(1)(f))</td></tr>
 </table>
 
-<h2>6. Your controls on Android</h2>
+<h2>7. Your controls on Android</h2>
 <ul>
   <li>Change ad and analytics consent: <strong>Settings → Privacy options</strong> in the App (shown where required).</li>
   <li>Reset or delete your Advertising ID, or opt out of personalised ads across apps: Android <em>Settings → Google → Ads</em> (wording may vary by device).</li>
   <li>Uninstall the App to stop all collection by the App and the services above.</li>
 </ul>
 
-<h2>7. Your rights</h2>
-<p>Depending on where you live (including under the GDPR and UK GDPR), you may have the right to access, correct, delete, restrict or object to the processing of your personal data, to data portability, and to withdraw consent at any time. Because the Apps have no accounts and we hold no data that directly identifies you, we may be unable to link a request to you; please include your device's Firebase or advertising identifiers if you want us to look for specific data. You can also use <a href="https://myaccount.google.com/data-and-privacy">Google's privacy tools</a>. You have the right to lodge a complaint with your local data protection authority.</p>
+<h2>8. Your rights</h2>
+<p>Depending on where you live (including under the GDPR and UK GDPR), you may have the right to access, correct, delete, restrict or object to the processing of your personal data, to data portability, and to withdraw consent at any time. For Apps without accounts we hold no data that directly identifies you, so we may be unable to link a request to you; please include your device's Firebase or advertising identifiers if you want us to look for specific data. For Pawblo, contact us at the address below. You can also use <a href="https://myaccount.google.com/data-and-privacy">Google's privacy tools</a>. You have the right to lodge a complaint with your local data protection authority.</p>
 
-<h2>8. Data retention</h2>
+<h2>9. Data retention</h2>
 <ul>
   <li>On-device data: until you uninstall the App, clear its data, or reset progress.</li>
   <li>Firebase Analytics: user-level data is kept for up to 14 months, then deleted.</li>
   <li>Firebase Crashlytics: crash reports are kept for up to 90 days.</li>
   <li>AdMob and Google Play: according to Google's own retention policies.</li>
+  <li>Pawblo server data: see the Pawblo section.</li>
 </ul>
 
-<h2>9. Children</h2>
+<h2>10. Children</h2>
 <p>The Apps are not directed at children under 13 (or the higher minimum age that applies in your country, such as 16 in some EEA countries). We do not knowingly collect personal information from children. If you believe a child has provided personal information through the Apps, please contact us and we will help remove it.</p>
 
-<h2>10. International transfers</h2>
-<p>Google may process data in countries outside your own, including the United States. Google relies on approved safeguards such as the EU Standard Contractual Clauses and the EU–US Data Privacy Framework.</p>
+<h2>11. International transfers</h2>
+<p>Google and Cloudflare may process data in countries outside your own, including the United States. Google relies on approved safeguards such as the EU Standard Contractual Clauses and the EU–US Data Privacy Framework.</p>
 
-<h2>11. Changes to this policy</h2>
+<h2>12. Changes to this policy</h2>
 <p>We may update this policy from time to time. The "Last updated" date above shows when it was last changed. Significant changes will also be noted in the App's store listing or update notes.</p>
 
-<h2>12. Contact</h2>
+<h2>13. Contact</h2>
 <p>Zenze Dev<br>Email: <a href="mailto:zenzedev@gmail.com">zenzedev@gmail.com</a></p>
 </main>
 </body>
